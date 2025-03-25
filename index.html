@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Creative Developer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="theme-toggle">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+  </div>
+
+  <header>
+    <div class="logo">Ragulan Karunanithi</div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="fade-in">Hello, I'm <span class="highlight">Ragulan Karunanithi</span></h1>
+        <h2 class="typing">Research Assistant | AI ML Enthusiast</h2>
+        <p>Solving complex problems with machine learning and engineering innovations</p>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn primary">View My Work</a>
+          <a href="#contact" class="btn secondary">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- Add data-animate attribute for live animation -->
+        <img src="../profile-pic%20(45).png" alt="Profile picture" class="hero-profile animated-profile" data-animate="bounce">
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I am a highly motivated mechanical engineering undergraduate at the University of Peradeniya, seeking positions where I can leverage my skills and knowledge to advance my career. I am particularly interested in roles as an ML engineer, Automobile engineer, or ML + Computer Vision + Automobile engineer.</p>
+          <p>With a strong foundation in Python and MATLAB, and hands-on experience in machine learning, computer vision, and automotive engineering, I am well-equipped to contribute innovative solutions and drive technological advancements in multidisciplinary projects.</p>
+          <ul>
+            <li>Proficient in Python, MATLAB, and C++ for engineering and AI applications.</li>
+            <li>Experienced in designing and simulating mechanical systems using SOLIDWORKS and Ansys.</li>
+            <li>Strong problem-solving skills with a focus on data-driven decision-making.</li>
+            <li>Passionate about integrating AI and machine learning into real-world engineering challenges.</li>
+            <li>Committed to continuous learning and staying updated with the latest technologies.</li>
+          </ul>
+          <div class="stats">
+            <div class="stat">
+              <span class="number">4+</span>
+              <span class="label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="number">50+</span>
+              <span class="label">Projects Completed</span>
+            </div>
+            <div class="stat">
+              <span class="number">20+</span>
+              <span class="label">Happy Clients</span>
+            </div>
+          </div>
+          <!-- Add download CV functionality -->
+          <a href="Ragulan_Karunanithi_CV.pdf" download class="btn primary">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Remove the 3D Model Section -->
+
+    <section id="projects" class="projects">
+      <div class="section-header">
+        <h2>My Projects</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="project-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="mechanical">Mechanical Engineering</button>
+        <button class="filter-btn" data-filter="software">Software Development</button>
+        <button class="filter-btn" data-filter="research">Research</button>
+      </div>
+      <div class="project-grid">
+        <div class="project-card" data-category="mechanical">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1662079041458-1f82bc7d1be2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Automatic Kottu Roti-Making Machine">
+          </div>
+          <div class="project-info">
+            <h3>Design and Development of Smart Fish Box Cooler</h3>
+            <p>Developed a smart fish box cooler to maintain fish freshness during transportation. The design caters to the specific needs of fishermen, emphasizing durability, portability, and efficient temperature control.</p>
+            <div class="project-tags">
+              <span>SOLIDWORKS</span>
+              <span>AutoCAD</span>
+              <span>Third Year Project</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn small">View Project</a>
+              <a href="#" class="btn small secondary">Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="mechanical">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Automatic Kottu Roti-Making Machine">
+          </div>
+          <div class="project-info">
+            <h3>Designing of an Automatic Kottu Roti-Making Machine</h3>
+            <p>Designed and implemented a semi-automated machine inspired by existing food processing systems like koththu rotti cutting and fried rice machines used in China and Japan.</p>
+            <div class="project-tags">
+              <span>SOLIDWORKS</span>
+              <span>Ansys FEA</span>
+              <span>Second Year Project</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn small">View Project</a>
+              <a href="#" class="btn small secondary">Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="research">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Multiphysics Modelling">
+          </div>
+          <div class="project-info">
+            <h3>Enhancing Predictive Capabilities of Multiphysics Modelling Through Machine Learning</h3>
+            <p>Researched the integration of machine learning with multiphysics modeling to improve predictive performance, initially focused on optimizing solar panel efficiency.</p>
+            <div class="project-tags">
+              <span>Machine Learning</span>
+              <span>Ansys Fluent</span>
+              <span>Ansys Workbench</span>
+              <span>Final Year Project</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn small">View Project</a>
+              <a href="#" class="btn small secondary">Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="software">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Bottle Count System">
+          </div>
+          <div class="project-info">
+            <h3>Hardware System for Bottle Count and Downtime Monitoring</h3>
+            <p>Implemented a hardware-based solution using ESP8266 to count bottles in a manufacturing plant with a Python GUI (Tkinter) for visualizing bottle count and downtime statistics.</p>
+            <div class="project-tags">
+              <span>Arduino</span>
+              <span>Sensors</span>
+              <span>MySQL</span>
+              <span>Python</span>
+              <span>Tkinter</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn small">View Project</a>
+              <a href="#" class="btn small secondary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="view-more">
+        <a href="#" class="btn secondary">View All Projects</a>
+      </div>
+    </section>
+
+    <section id="experience" class="experience">
+      <div class="section-header">
+        <h2>My Experience</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="experience-timeline">
+        <div class="experience-item">
+          <div class="experience-info">
+            <div class="experience-year">Sep 2024 – Present</div>
+            <div class="experience-position">Research Assistant</div>
+            <div class="experience-company">Mokpo National University & University of Peradeniya</div>
+            <div class="experience-location"><i class="fas fa-map-marker-alt"></i> Remote (Muan, South Jeolla, South Korea)</div>
+            <p>Involved in the research project "CFD-based ROM (Reduced Order Model)", contributing to computational fluid dynamics simulations and predictive modeling.</p>
+            <div class="experience-skills">
+              <span>Research Skills</span>
+              <span>Ansys Fluent</span>
+              <span>CFD</span>
+              <span>Data Analysis</span>
+              <span>Simulation</span>
+              <span>Technical Writing</span>
+              <span>Python</span>
+              <span>MATLAB</span>
+              <span>ROM Techniques</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-info">
+            <div class="experience-year">Aug 2024 – Sep 2024</div>
+            <div class="experience-position">Full Stack Developer (Intern)</div>
+            <div class="experience-company">Pantech ProEd Pvt Ltd</div>
+            <div class="experience-location"><i class="fas fa-map-marker-alt"></i> Remote (Chennai, India)</div>
+            <p>Worked on full-stack web development projects, involving both front-end and back-end technologies. Gained experience in building scalable web applications.</p>
+            <div class="experience-skills">
+              <span>Web Technologies</span>
+              <span>Full-Stack Development</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-info">
+            <div class="experience-year">Aug 2023 – Oct 2023</div>
+            <div class="experience-position">Machine Learning Intern</div>
+            <div class="experience-company">International Distillers Ltd</div>
+            <div class="experience-location"><i class="fas fa-map-marker-alt"></i> Malabe, Sri Lanka (On-site)</div>
+            <p>Implemented a hardware system to monitor and store bottle counts in a MySQL database and developed an application to analyze downtime using that data.</p>
+            <div class="experience-skills">
+              <span>Arduino</span>
+              <span>MySQL</span>
+              <span>Python</span>
+              <span>Sensors</span>
+              <span>Data Analytics</span>
+              <span>Hardware Integration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-info">
+            <div class="experience-year">May 2022 – Aug 2022</div>
+            <div class="experience-position">MEP Engineer (Intern)</div>
+            <div class="experience-company">National Water Supply and Drainage Board</div>
+            <div class="experience-location"><i class="fas fa-map-marker-alt"></i> Getambe, Kandy (On-site)</div>
+            <p>Hands-on experience in developing and optimizing water treatment processes and pump maintenance systems within municipal infrastructure.</p>
+            <div class="experience-skills">
+              <span>Water Treatment</span>
+              <span>Pump Maintenance</span>
+              <span>Process Optimization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="education">
+      <div class="section-header">
+        <h2>My Education</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="education-timeline">
+        <div class="education-item">
+          <div class="education-info">
+            <div class="education-year">Nov 2019 – Aug 2024</div>
+            <div class="education-degree">Bachelor's Degree in Mechanical Engineering</div>
+            <div class="education-institution">University of Peradeniya</div>
+            <div class="education-details">
+              <div class="education-grade">CGPA: 3.3</div>
+              <p>Focused on mechanical system design, simulation, and data-driven engineering approaches.</p>
+              <div class="education-skills">
+                <span>Python (Programming Language)</span>
+                <span>Problem Solving</span>
+                <span>Engineering Analysis</span>
+                <span>Technical Communication</span>
+                <span>Design Thinking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="education-item">
+          <div class="education-info">
+            <div class="education-year">Jan 2009 – Aug 2018</div>
+            <div class="education-degree">GCE Advanced Level – Physical Sciences</div>
+            <div class="education-institution">J/Hartley College</div>
+            <div class="education-details">
+              <div class="education-grade">Grades: Combined Mathematics – A, Chemistry – A, Physics – C</div>
+              <p>Participated in national-level competitions including Mathematics Olympiads and quizzes.</p>
+              <div class="education-achievements">
+                <h4>Achievements:</h4>
+                <ul>
+                  <li>Mathematics Olympiad</li>
+                  <li>Maths Quiz</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Removing the Skills section -->
+
+    <section id="contact" class="contact">
+      <div class="section-header">
+        <h2>Contact Me</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p>ragulnithii@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Phone</h3>
+              <p>+94 765734486</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Location</h3>
+              <p>Malabe, Colombo</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ragulan-karunanithi-29b401220" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 Ragulan Karunanithy. All Rights Reserved.</p>
+      <p>Designed & Built with ❤️</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
