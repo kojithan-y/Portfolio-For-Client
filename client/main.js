@@ -1,3 +1,6 @@
+// Add debugging at the top
+console.log('Client main.js loaded');
+
 // DOM Elements
 const themeToggle = document.querySelector('.theme-toggle');
 const body = document.body;
@@ -13,6 +16,16 @@ const sections = document.querySelectorAll('section');
 
 // Initialize Animation
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM fully loaded in client/main.js');
+  
+  // Debug all important elements
+  console.log('themeToggle:', themeToggle ? 'Found' : 'Missing');
+  console.log('menuToggle:', menuToggle ? 'Found' : 'Missing');
+  console.log('cursor:', cursor ? 'Found' : 'Missing');
+  console.log('contactForm:', contactForm ? 'Found' : 'Missing');
+  console.log('filterBtns:', filterBtns.length > 0 ? `Found ${filterBtns.length}` : 'None found');
+  console.log('CSS Variables:', getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim());
+  
   // Update page title
   document.title = "Ragulan Karunanithy | Mechanical Engineer & AI Enthusiast";
   
@@ -35,6 +48,19 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Set active navigation link based on scroll position
   updateActiveNavLink();
+  
+  // Initialize animated elements
+  const animatedElements = document.querySelectorAll('[data-animate]');
+  const profileObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        profileObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  animatedElements.forEach((el) => profileObserver.observe(el));
 });
 
 // Custom Cursor
@@ -263,9 +289,10 @@ document.querySelectorAll('.experience-item, .education-item').forEach((el, inde
 window.addEventListener('scroll', () => {
   const scrollPosition = window.pageYOffset;
   
-  // Parallax for hero section
-  if (document.querySelector('.hero')) {
-    document.querySelector('.shape').style.transform = `translateY(${scrollPosition * 0.15}px) rotate(${scrollPosition * 0.02}deg)`;
+  // Parallax for hero section - with error handling
+  const shapeElement = document.querySelector('.shape');
+  if (document.querySelector('.hero') && shapeElement) {
+    shapeElement.style.transform = `translateY(${scrollPosition * 0.15}px) rotate(${scrollPosition * 0.02}deg)`;
   }
   
   // Subtle parallax for section headers
@@ -294,20 +321,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
     }
   });
-});
-
-// Add IntersectionObserver for profile image animation
-document.addEventListener('DOMContentLoaded', () => {
-  const animatedElements = document.querySelectorAll('[data-animate]');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  animatedElements.forEach((el) => observer.observe(el));
 });

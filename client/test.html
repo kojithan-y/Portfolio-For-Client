@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS/JS Test Page</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .test-container {
+      max-width: 800px;
+      margin: 100px auto;
+      padding: 30px;
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+    .test-section {
+      margin-bottom: 30px;
+    }
+    .color-sample {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="test-container">
+    <h1>CSS and JavaScript Test Page</h1>
+    <p>This page verifies that your CSS and JavaScript files are loading correctly.</p>
+    
+    <div class="test-section">
+      <h2>CSS Variables Test</h2>
+      <div id="css-vars"></div>
+    </div>
+    
+    <div class="test-section">
+      <h2>Components Test</h2>
+      <div>
+        <h3>Buttons:</h3>
+        <a href="#" class="btn primary">Primary Button</a>
+        <a href="#" class="btn secondary">Secondary Button</a>
+      </div>
+    </div>
+    
+    <div class="test-section">
+      <h2>Theme Toggle Test</h2>
+      <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </div>
+      <p>Click the icon above to toggle dark/light mode</p>
+    </div>
+  </div>
+
+  <script>
+    console.log('Test script running');
+    
+    // Test CSS variables
+    const cssVars = ['--primary-color', '--secondary-color', '--text-color', '--bg-color', '--card-bg'];
+    const cssVarsContainer = document.getElementById('css-vars');
+    
+    cssVars.forEach(varName => {
+      const value = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+      const div = document.createElement('div');
+      div.style.margin = '5px 0';
+      
+      const colorSample = document.createElement('span');
+      colorSample.className = 'color-sample';
+      colorSample.style.backgroundColor = value;
+      
+      div.appendChild(colorSample);
+      div.appendChild(document.createTextNode(`${varName}: ${value}`));
+      
+      cssVarsContainer.appendChild(div);
+    });
+    
+    // Theme toggle test
+    const themeToggle = document.querySelector('.theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      console.log('Theme toggled');
+    });
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

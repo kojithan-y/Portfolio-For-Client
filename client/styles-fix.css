@@ -1,0 +1,57 @@
+/* Additional styles to fix frontend issues */
+
+/* Fix for any layout inconsistencies */
+body {
+  overflow-x: hidden;
+}
+
+/* Fix for potential z-index issues */
+header {
+  z-index: 1000 !important;
+}
+
+/* Adding smooth transitions */
+a, button, .btn, .project-card, .experience-item, .education-item {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Fix potential spacing issues */
+.section-header {
+  margin-bottom: 40px;
+}
+
+/* Fix form rendering issues */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix for missing or broken animations */
+.hero-profile {
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Fix potential responsive issues */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+}
